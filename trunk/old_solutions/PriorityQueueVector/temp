@@ -1,0 +1,34 @@
+import java.util.*;
+
+public class PriorityQueue {
+  private Vector vector;
+
+  public PriorityQueue () {
+    vector = new Vector ();
+  }
+
+  public int size () {
+    return vector.size();
+  }
+
+  public void insert (PQItem newItem) {
+    Object obj = (Object) newItem;
+    vector.addElement (obj);
+  }
+
+  public PQItem remove () {
+    int n = vector.size ();
+    if (n == 0) return null;
+
+    PQItem champion = (PQItem) vector.firstElement();
+    PQItem challenger;
+
+    for (int i=1; i<n; i++) {
+      challenger = (PQItem) vector.elementAt(i);
+      if (challenger.compareTo(champion) > 0) {
+	champion = challenger;
+      }
+    }
+    vector.removeElement ((Object) champion);
+    return champion;
+  }

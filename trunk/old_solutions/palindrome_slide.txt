@@ -1,0 +1,82 @@
+
+  GUARDIAN PATTERN: caller is responsible for preconditions
+           have to "prove" preconditions before invokation
+
+  // first returns the first character of a string
+  // first only works if s has at least one characters
+  public static char first (String s) {
+    return s.charAt (0);
+  }
+
+  // last returns the last character of a string
+  // last only works if s has at least one characters
+  public static char last (String s) {
+    int len = s.length();
+    return s.charAt (len - 1);
+  }
+
+  // middle returns a substring that includes all but the
+  // first and last; only works if s has at least two characters
+  public static String middle (String s) {
+    int length = s.length();
+    return s.substring (1, length-1);
+  }
+
+  public static boolean isPalindrome (String s) {
+    int len = s.length();
+    if (len == 0 || len == 1) {
+      return true;
+    }
+
+    // at this point we know that len>=2, so it is safe
+    // to invoke first, last, and middle
+
+    if (first(s) != last(s)) {
+      return false;
+    } else {
+      boolean recurse = isPalindrome (middle (s));
+      return recurse;
+    }
+  }
+
+
+  BULLETPROOF CODE: callee handles every possible error
+                    there are no preconditions
+
+  // second returns the second character of a string
+  // it only works if there are at least two characters
+  public static char second (String s) {
+    return s.charAt (1);
+  }
+
+  // tail returns all but the last two characters of the
+  // String.  it is completely bulletproof; there are no
+  // preconditions.  
+  public static String tail (String s) {
+    if (s == null) return "";
+    int len = s.length();
+    if (len == 0 || len == 1) {
+      return "";
+    }
+    return s.substring (2, len);
+  }
+
+  public static boolean isDupledrome (String s) {
+    if (s == null) return false;
+    int len = s.length();
+
+    // the empty string is a dupledrome
+    if (len == 0) return true;
+
+    // any string with an odd number of letters is not.
+    if (len%2 == 1) return false;
+
+    // at this point, is it safe to invoke second?
+
+    if (first(s) == second(s)) {
+      return isDupledrome (tail (s));
+    } else {
+      return false;
+    }
+  }
+
