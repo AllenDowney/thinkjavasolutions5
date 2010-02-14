@@ -1,4 +1,9 @@
-// Represents a date using its day, month, and year
+/**
+ * Represents a date using its day, month, and year
+ * 
+ * @author Mikey Lintz
+ *
+ */
 public class Date {
 	
 	int year, month, day;
