@@ -1,4 +1,9 @@
-// Represents a rational number
+/**
+ * Represents a rational number
+ * 
+ * @author Mikey Lintz
+ *
+ */
 public class Rational {
 
 	int numerator, denominator;

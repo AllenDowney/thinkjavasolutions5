@@ -1,4 +1,9 @@
-// Represents a Scrabble tile
+/**
+ * Represents a Scrabble tile
+ * 
+ * @author Mikey Lintz
+ *
+ */
 public class Tile {
 
 	char letter;
