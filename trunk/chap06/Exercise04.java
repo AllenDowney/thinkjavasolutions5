@@ -1,3 +1,7 @@
+/**
+ * @author Poorva Singal
+ */
+
 package com.greenteapress.thinkapjava.chap06;
 
 /*
@@ -28,7 +32,6 @@ public class Exercise04 {
 		  }
 		  i++; 
 	  }
-	  
 	  return xToPowerN; 
   }
 
@@ -37,7 +40,7 @@ public class Exercise04 {
     
     //test numbers
     float x = 4.0f;
-    int n = 2;
-    System.out.println(x + " raised to the power of "+ n + " equals " +power(x,n)); 
+    int n = 0;
+    System.out.println(x + " raised to the power of " + n + " equals " + power(x,n)); 
   }
 }
