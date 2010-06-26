@@ -2,8 +2,6 @@
  * @author Poorva Singal
  */
 
-package com.greenteapress.thinkapjava.chap06;
-
 /*
  *
  * Exercise 6.4
@@ -22,7 +20,7 @@ public class Exercise04 {
 	  while (i < Math.abs(n)) {
 		  
 		  //if n is positive, should multiply by x
-		  if (n >= 0) {
+		  if (n > 0) {
 			  xToPowerN *= x; 
 		  }
 		  
@@ -40,7 +38,7 @@ public class Exercise04 {
     
     //test numbers
     float x = 4.0f;
-    int n = 0;
+    int n = 2;
     System.out.println(x + " raised to the power of " + n + " equals " + power(x,n)); 
   }
 }
