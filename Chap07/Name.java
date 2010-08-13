@@ -3,6 +3,8 @@
  */
 
 /*
+ * Exercise 7.8
+ * 
  * When names are recorded on a computer, they are sometimes written with the
  * first name first, like "Allen Downey," and sometimes with the last name
  * first and a comma, like "Downey, Allen."  That can make it difficult to
@@ -17,7 +19,7 @@
  * If you are curious, find a local phone book like a campus directory and see
  * if you can figure out the alphabetizing scheme.  Look for multiple-word
  * names like Van Houten and names with nonstandard capitalization, like
- * desJardins.  See if you can figure out the soring rules.  If you have 
+ * desJardins.  See if you can figure out the sorting rules.  If you have 
  * access to a European phone book, try that, too, and see if the rules are
  * different.  
  * 
